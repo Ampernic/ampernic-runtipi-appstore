@@ -19,9 +19,7 @@
           "containerPath": "/config"
         }
       ],
-      "devices": [
-        "${devices}"
-      ]
+      "devices": "${devices}"
     }
   ]
 }

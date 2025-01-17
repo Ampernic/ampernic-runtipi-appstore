@@ -13,7 +13,16 @@
   "short_desc": "Open source home automation that puts local control and privacy first",
   "author": "Home Assistant",
   "source": "https://github.com/home-assistant/core",
-  "form_fields": [],
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Devices",
+      "env_variable": "devices",
+      "default": "",
+      "required": false,
+      "hint": "Device path for direct using in HomeAssistant (Zigbee adapters for exapmle) in format `{device_path:container_path}`"
+    }
+  ],
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1691943801422,
   "updated_at": 1736762866691
