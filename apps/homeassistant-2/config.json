@@ -15,10 +15,10 @@
   "source": "https://github.com/home-assistant/core",
   "form_fields": [
     {
-      "type": "array",
+      "type": "text",
       "label": "Devices",
       "env_variable": "devices",
-      "default": [],
+      "default": "[]",
       "required": false,
       "hint": "Device path for direct using in HomeAssistant (Zigbee adapters for exapmle) in format `{device_path:container_path}`"
     }
