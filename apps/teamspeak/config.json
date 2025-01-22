@@ -1,0 +1,19 @@
+{
+  "$schema": "../app-info-schema.json",
+  "name": "TeamSpeak Server",
+  "available": true,
+  "deprecated": false,
+  "port": 9987,
+  "tipi_version": 3,
+  "version": "stable",
+  "id": "homeassistant",
+  "categories": ["social"],
+  "description": "Own teamspeak server on your Runtipi.",
+  "short_desc": "Own teamspeak server on your Runtipi",
+  "author": "TeamSpeak Devels",
+  "source": "https://github.com/docker-library/repo-info/tree/master/repos/teamspeak",
+  "form_fields": [],
+  "supported_architectures": ["amd64"],
+  "created_at": 1691943801422,
+  "updated_at": 1723566283000
+}
