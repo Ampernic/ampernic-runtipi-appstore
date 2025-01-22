@@ -19,6 +19,8 @@ services:
       TS3SERVER_LICENSE: accept
     networks:
       - tipi_main_network
+    depends_on:
+      - db
     labels:
       # Main
       traefik.enable: true
@@ -31,3 +33,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${TSDB_PASS}
       MYSQL_DATABASE: teamspeak
+    networks:
+      - tipi_main_network
+    labels:
+      runtipi.managed: true
