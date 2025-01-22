@@ -6,7 +6,7 @@
   "port": 9987,
   "tipi_version": 3,
   "version": "stable",
-  "id": "homeassistant",
+  "id": "teamspeak",
   "categories": ["social"],
   "description": "Own teamspeak server on your Runtipi.",
   "short_desc": "Own teamspeak server on your Runtipi",
