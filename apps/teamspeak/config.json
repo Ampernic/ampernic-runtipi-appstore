@@ -13,7 +13,28 @@
   "short_desc": "Own teamspeak server on your Runtipi",
   "author": "TeamSpeak Devels",
   "source": "https://github.com/docker-library/repo-info/tree/master/repos/teamspeak",
-  "form_fields": [],
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Username",
+      "env_variable": "TSDB_USERNAME",
+      "default": "",
+      "min": 14,
+      "max": 25,
+      "required": false,
+      "hint": "Username of your TeamSpeak Database user"
+    },
+    {
+      "type": "password",
+      "label": "Password",
+      "env_variable": "TSDB_PASS",
+      "default": "",
+      "min": 14,
+      "max": 25,
+      "required": false,
+      "hint": "Password of your TeamSpeak Database password"
+    }
+  ],
   "supported_architectures": ["amd64"],
   "created_at": 1691943801422,
   "updated_at": 1723566283000

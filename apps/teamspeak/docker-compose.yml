@@ -12,14 +12,18 @@ services:
       TS3SERVER_DB_PLUGIN: ts3db_mariadb
       TS3SERVER_DB_SQLCREATEPATH: create_mariadb
       TS3SERVER_DB_HOST: db
-      TS3SERVER_DB_USER: root
-      TS3SERVER_DB_PASSWORD: example
+      TS3SERVER_DB_USER: ${TSDB_USERNAME}
+      TS3SERVER_DB_PASSWORD: ${TSDB_PASS}
       TS3SERVER_DB_NAME: teamspeak
       TS3SERVER_DB_WAITUNTILREADY: 30
       TS3SERVER_LICENSE: accept
+    labels:
+      # Main
+      traefik.enable: true
+      traefik.http.services.teamspeak.loadbalancer.server.port: 9987
   db:
     image: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: ${TSDB_PASS}
       MYSQL_DATABASE: teamspeak
