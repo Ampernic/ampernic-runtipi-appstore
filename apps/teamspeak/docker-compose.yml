@@ -24,7 +24,7 @@ services:
     labels:
       # Main
       traefik.enable: true
-      traefik.http.middlewares.esphome-web-redirect.redirectscheme.scheme: https
+      traefik.http.middlewares.esphome-web-redirect.redirectscheme.scheme: http
       traefik.http.services.esphome.loadbalancer.server.port: 9987
       # Web
       traefik.http.routers.teamspeak-insecure.rule: Host(`${APP_DOMAIN}`)
