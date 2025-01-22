@@ -19,7 +19,7 @@
       "label": "Username",
       "env_variable": "TSDB_USERNAME",
       "default": "",
-      "min": 14,
+      "min": 4,
       "max": 25,
       "required": false,
       "hint": "Username of your TeamSpeak Database user"
@@ -29,7 +29,7 @@
       "label": "Password",
       "env_variable": "TSDB_PASS",
       "default": "",
-      "min": 14,
+      "min": 8,
       "max": 25,
       "required": false,
       "hint": "Password of your TeamSpeak Database password"
