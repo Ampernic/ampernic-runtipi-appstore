@@ -24,10 +24,28 @@ services:
     labels:
       # Main
       traefik.enable: true
-      traefik.http.services.teamspeak.loadbalancer.server.port: 9987
+      traefik.http.middlewares.esphome-web-redirect.redirectscheme.scheme: https
+      traefik.http.services.esphome.loadbalancer.server.port: 9987
+      # Web
       traefik.http.routers.teamspeak-insecure.rule: Host(`${APP_DOMAIN}`)
       traefik.http.routers.teamspeak-insecure.entrypoints: web
       traefik.http.routers.teamspeak-insecure.service: teamspeak
+      traefik.http.routers.teamspeak-insecure.middlewares: teamspeak-web-redirect
+      # Websecure
+      traefik.http.routers.teamspeak.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.teamspeak.entrypoints: websecure
+      traefik.http.routers.teamspeak.service: teamspeak
+      traefik.http.routers.teamspeak.tls.certresolver: myresolver
+      # Local domain
+      traefik.http.routers.teamspeak-local-insecure.rule: Host(`teamspeak.${LOCAL_DOMAIN}`)
+      traefik.http.routers.teamspeak-local-insecure.entrypoints: web
+      traefik.http.routers.teamspeak-local-insecure.service: teamspeak
+      traefik.http.routers.teamspeak-local-insecure.middlewares: teamspeak-web-redirect
+      # Local domain secure
+      traefik.http.routers.teamspeak-local.rule: Host(`teamspeak.${LOCAL_DOMAIN}`)
+      traefik.http.routers.teamspeak-local.entrypoints: websecure
+      traefik.http.routers.teamspeak-local.service: teamspeak
+      traefik.http.routers.teamspeak-local.tls: true
       #
       runtipi.managed: true 
   db:
