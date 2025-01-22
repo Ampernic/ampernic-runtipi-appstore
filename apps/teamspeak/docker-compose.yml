@@ -25,6 +25,9 @@ services:
       # Main
       traefik.enable: true
       traefik.http.services.teamspeak.loadbalancer.server.port: 9987
+      traefik.http.routers.teamspeak-insecure.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.teamspeak-insecure.entrypoints: web
+      traefik.http.routers.teamspeak-insecure.service: teamspeak
       #
       runtipi.managed: true 
   db:
