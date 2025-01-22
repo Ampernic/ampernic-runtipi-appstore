@@ -3,6 +3,7 @@
   "name": "TeamSpeak Server",
   "available": true,
   "deprecated": false,
+  "exposable": true,
   "port": 9987,
   "tipi_version": 3,
   "version": "stable",
